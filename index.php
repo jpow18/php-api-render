@@ -6,6 +6,6 @@
 
   $db->connect();
 
-  
 
+  var_dump(getenv('password'));
 ?>
