@@ -2,15 +2,19 @@
 
   class Database {
     // DB Params
-    private $host = 'localhost';
-    private $port = '5432';
-    private $db_name = 'MyBlog';
-    private $username = 'postgres';
+    private $host;
+    private $port;
+    private $db_name;
+    private $username;
     private $password;
     private $conn;
 
     public function __construct() {
-      $this->password = getenv('password');
+      $this->username = getenv('USERNAME');
+      $this->password = getenv('PASSWORD');
+      $this->db_name = geteNv('DBNAME');
+      $this->host = getenv('HOST');
+      $this->port = getenv('PORT');
     }
 
     // DB Connect
